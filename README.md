@@ -21,7 +21,9 @@ user input Shows win or game-over message
 guess-the-word/
 │
 ├── main.py          # Main game logic (GuessTheWord class)
+
 ├── words.py         # Handles word selection and guessing logic
+
 └── README.md        # Project documentation
 ________________________________________
 
