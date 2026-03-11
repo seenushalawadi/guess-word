@@ -39,23 +39,11 @@ Random module – for secret word selection
 📂 Project Structure
 
 project-folder/
-
-│
-
 ├── main.py
-
 ├── wordle.py
-
 ├── letter_state.py
-
-│
-
 ├── data/
-
 │   └── wordle_words.txt
-
-│
-
 └── README.md
 
 
@@ -100,23 +88,7 @@ Color	Meaning
 
 Keep guessing until you solve the puzzle or run out of attempts.
 
+<img width="496" height="384" alt="image" src="https://github.com/user-attachments/assets/9efa5b80-5d5a-4922-9e92-fb8ffdca9655" />
 
-🧾 Example Gameplay
-
-Clue: --- A girl with a man about to start a new life ---
-
-Type your guess: PLANT
-
-Your results so far...
-You have 5 attempts remaining.
-
-┌─────────────┐
-│ P L A N T   │
-│ _ _ _ _ _   │
-│ _ _ _ _ _   │
-│ _ _ _ _ _   │
-│ _ _ _ _ _   │
-│ _ _ _ _ _   │
-└─────────────┘
 
   thankyou..........
