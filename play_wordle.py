@@ -1,99 +1,81 @@
-from typing import List
-from letter_state import LetterState
-from wordle import Wordle
-from colorama import Fore
-import random
+🎮 Terminal Wordle Game (Python)
+
+A simple Wordle-style terminal game written in Python.
+The player has to guess a secret word within a limited number of attempts. After each guess, the game provides color-coded feedback to indicate correct letters and positions.
+
+This project runs entirely in the command line and uses colored output for a better gameplay experience.
+
+📌 Features
+
+🎯 Random secret word selection
+
+⌨️ User input validation
+
+🟩 Green letters for correct position
+
+🟨 Yellow letters for correct letter in wrong position
+
+⬜ White letters for incorrect letters
+
+🔢 Limited number of attempts
+
+📦 Word list loaded from a file
+
+🖥️ Clean terminal UI with borders
+
+               🧠 Game Clue
+A girl with a man about to start a new life
+
+Use the clue to help guess the secret word.
+
+                📂 Project Structure
+project-folder/
+│
+├── main.py
+├── wordle.py
+├── letter_state.py
+│
+├── data/
+│   └── wordle_words.txt
+│
+└── README.md
+
+⚙️ Installation
+
+Clone the repository
+git clone https://github.com/your-username/terminal-wordle.git
+
+cd guess-word
+
+run python play_wordle.py
+
+🎮 How to Play
+
+Enter a 5-letter word.
+
+After each guess, the game shows colored feedback:
+
+| Color     | Meaning                            |
+| --------- | ---------------------------------- |
+| 🟩 Green  | Correct letter in correct position |
+| 🟨 Yellow | Correct letter but wrong position  |
+| ⬜ White   | Letter not in the word             |
 
 
-def main():
+🧾 Example Gameplay
+                
+Clue: --- A girl with a man about to start a new life ---
 
-    print("\nClue: --- A girl with a man about to start a new life ---")
-    word_set = load_word_set("data/wordle_words.txt")
-    secret = random.choice(list(word_set))
-    wordle = Wordle(secret)
-    
-    while wordle.can_attempt:
-        x = input("\nType your guess: ")
+Type your guess: PLANT
 
-        if len(x) != wordle.WORD_LENGTH:
-            print(
-                Fore.RED
-                + f"Word must be {wordle.WORD_LENGTH} characters long!"
-                + Fore.RESET
-            )
-            continue
+Your results so far...
+You have 5 attempts remaining.
 
-        if not x in word_set:
-            print(
-                Fore.RED
-                + f"{x} is not a valid word!"
-                + Fore.RESET
-            )
-            continue
-
-        wordle.attempt(x)
-        display_results(wordle)
-
-    if wordle.is_solved:
-        print("You've solved the puzzle.")
-    else:
-        print("You failed to solve the puzzle!")
-        print(f"The secret word was: {wordle.secret}")
-
-
-def display_results(wordle: Wordle):
-    print("\nYour results so far...")
-    print(f"You have {wordle.remaining_attempts} attempts remaining.\n")
-
-    lines = []
-
-    for word in wordle.attempts:
-        result = wordle.guess(word)
-        colored_result_str = convert_result_to_color(result)
-        lines.append(colored_result_str)
-
-    for _ in range(wordle.remaining_attempts):
-        lines.append(" ".join(["_"] * wordle.WORD_LENGTH))
-
-    draw_border_around(lines)
-
-
-def load_word_set(path: str):
-    word_set = set()
-    with open(path, "r") as f:
-        for line in f.readlines():
-            word = line.strip().upper()
-            word_set.add(word)
-    return word_set
-
-
-def convert_result_to_color(result: List[LetterState]):
-    result_with_color = []
-    for letter in result:
-        if letter.is_in_position:
-            color = Fore.GREEN
-        elif letter.is_in_word:
-            color = Fore.YELLOW
-        else:
-            color = Fore.WHITE
-        colored_letter = color + letter.character + Fore.RESET
-        result_with_color.append(colored_letter)
-    return " ".join(result_with_color)
-
-
-def draw_border_around(lines: List[str], size: int = 9, pad: int = 1):
-
-    content_length = size + pad * 2
-    top_border = "┌" + "─" * content_length + "┐"
-    bottom_border = "└" + "─" * content_length + "┘"
-    space = " " * pad
-    print(top_border)
-
-    for line in lines:
-        print("│" + space + line + space + "│")
-
-    print(bottom_border)
-
-
-if __name__ == "__main__":
-    main()
+┌─────────────┐
+│ P L A N T   │
+│ _ _ _ _ _   │
+│ _ _ _ _ _   │
+│ _ _ _ _ _   │
+│ _ _ _ _ _   │
+│ _ _ _ _ _   │
+└─────────────┘
