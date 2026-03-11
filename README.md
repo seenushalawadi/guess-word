@@ -38,12 +38,12 @@ Random module – for secret word selection
 
 📂 Project Structure
 
-project-folder/
-├── main.py
-├── wordle.py
-├── letter_state.py
-├── data/
-│   └── wordle_words.txt
+project-folder/\n
+├── main.py\n
+├── wordle.py\n
+├── letter_state.py\n
+├── data/\n
+│   └── wordle_words.txt\n
 └── README.md
 
 
