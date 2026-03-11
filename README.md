@@ -10,10 +10,13 @@ The player tries to guess a hidden word one letter at a time within a limited nu
 If the player guesses all the letters before the attempts run out, they win the game. Otherwise, 
 the game ends and the correct word is revealed.
 
-📌 Features
-Interactive terminal-based gameplay Guess the word one letter at a time Maximum of 10 attempts 
-Displays the current word progress Validates user input Shows win or game-over message
 ________________________________________
+📌 Features
+Interactive terminal-based gameplay Guess the word 
+one letter at a time Maximum of 10 attempts 
+Displays the current word progress Validates 
+user input Shows win or game-over message
+
 📂 Project Structure
 guess-the-word/
 │
