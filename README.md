@@ -82,7 +82,8 @@ Color	Meaning
 
 Keep guessing until you solve the puzzle or run out of attempts.
 
-<img width="496" height="384" alt="image" src="https://github.com/user-attachments/assets/9efa5b80-5d5a-4922-9e92-fb8ffdca9655" />
+<img width="359" height="426" alt="image" src="https://github.com/user-attachments/assets/18fba2c1-c76a-4d8d-9344-15bc381b0905" />
+
 
 
   thankyou..........
