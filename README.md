@@ -37,27 +37,41 @@ Colorama – for colored terminal text
 Random module – for secret word selection
 
 📂 Project Structure
+
 project-folder/
+
 │
+
 ├── main.py
+
 ├── wordle.py
+
 ├── letter_state.py
+
 │
+
 ├── data/
+
 │   └── wordle_words.txt
+
 │
+
 └── README.md
+
+
 File Description
 File	Description
 main.py	Main program that runs the game
 wordle.py	Contains the Wordle game logic
 letter_state.py	Defines the letter state (correct, misplaced, incorrect)
 data/wordle_words.txt	List of valid words
+
+
 ⚙️ Installation
 
 Clone the repository
 
-git clone https://github.com/your-username/terminal-wordle.git
+git clone https://github.com/seenushalawadi/guess-word.git
 
 Navigate into the project
 
@@ -70,7 +84,9 @@ pip install colorama
 
 Run the game using:
 
-python main.py
+python wordle.py
+
+
 🎮 How to Play
 
 Enter a 5-letter word.
@@ -84,7 +100,9 @@ Color	Meaning
 
 Keep guessing until you solve the puzzle or run out of attempts.
 
+
 🧾 Example Gameplay
+
 Clue: --- A girl with a man about to start a new life ---
 
 Type your guess: PLANT
@@ -100,14 +118,5 @@ You have 5 attempts remaining.
 │ _ _ _ _ _   │
 │ _ _ _ _ _   │
 └─────────────┘
-📈 Future Improvements
 
-Add difficulty levels
-
-Add keyboard color tracking
-
-GUI version using Tkinter or Pygame
-
-Score tracking
-
-Online multiplayer
+  thankyou..........
