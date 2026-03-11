@@ -69,11 +69,9 @@ git clone https://github.com/seenushalawadi/guess-word.git
 
 Navigate into the project
 
-cd terminal-wordle
+cd guess-word
 
-Install dependencies
 
-pip install colorama
 ▶️ How to Run
 
 Run the game using:
