@@ -19,7 +19,7 @@ user input Shows win or game-over message
 
 📂 Project Structure
 
-guess-the-word
+guess-the-word/
 
 ├── main.py          # Main game logic (GuessTheWord class)
 
