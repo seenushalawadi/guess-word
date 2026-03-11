@@ -48,7 +48,7 @@ project-folder/
 
 ├── data/
 
-│   └── wordle_words.txt
+└── wordle_words.txt
 
 └── README.md
 
