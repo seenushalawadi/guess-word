@@ -1,99 +1,113 @@
-# guess-the-word
-Developed a console-based word guessing game with core gameplay features to select random words 
-accept user guesses, track attempts, and display progress using string manipulation.
+🎮 Terminal Wordle Game (Python)
 
-🎮 Guess The Word Game (Python)
+A simple Wordle-style terminal game written in Python.
+The player has to guess a secret word within a limited number of attempts. After each guess, the game provides color-coded feedback to indicate correct letters and positions.
 
-A simple command-line word guessing game written in Python.
-The player tries to guess a hidden word one letter at a time within a limited number of attempts.
+This project runs entirely in the command line and uses colored output for a better gameplay experience.
 
-If the player guesses all the letters before the attempts run out, they win the game. Otherwise, 
-the game ends and the correct word is revealed.
-
-________________________________________
 📌 Features
-Interactive terminal-based gameplay Guess the word 
-one letter at a time Maximum of 10 attempts 
-Displays the current word progress Validates 
-user input Shows win or game-over message
+
+🎯 Random secret word selection
+
+⌨️ User input validation
+
+🟩 Green letters for correct position
+
+🟨 Yellow letters for correct letter in wrong position
+
+⬜ White letters for incorrect letters
+
+🔢 Limited number of attempts
+
+📦 Word list loaded from a file
+
+🖥️ Clean terminal UI with borders
+
+🧠 Game Clue
+A girl with a man about to start a new life
+
+Use the clue to help guess the secret word.
+
+🛠️ Technologies Used
+
+Python
+
+Colorama – for colored terminal text
+
+Random module – for secret word selection
 
 📂 Project Structure
+project-folder/
+│
+├── main.py
+├── wordle.py
+├── letter_state.py
+│
+├── data/
+│   └── wordle_words.txt
+│
+└── README.md
+File Description
+File	Description
+main.py	Main program that runs the game
+wordle.py	Contains the Wordle game logic
+letter_state.py	Defines the letter state (correct, misplaced, incorrect)
+data/wordle_words.txt	List of valid words
+⚙️ Installation
 
-guess-the-word/
+Clone the repository
 
-├── main.py          # Main game logic (GuessTheWord class)
+git clone https://github.com/your-username/terminal-wordle.git
 
-├── words.py         # Handles word selection and guessing logic
+Navigate into the project
 
-└── README.md        # Project documentation
-________________________________________
+cd terminal-wordle
 
-⚙️ Requirements
-Python 3.7+
-No external libraries are required.
+Install dependencies
 
+pip install colorama
 ▶️ How to Run
-Clone or download the repository.
-git clone https://github.com/seenushalawadi/guess-word.git
 
-Navigate to the project folder.
-cd guess-the-word
+Run the game using:
 
-Run the game.
 python main.py
---------------------------------------------------------------------------
-🎯 How the Game Works
-The game selects a random hidden word using the Words class.
-The player guesses one letter at a time.
-If the letter exists in the word:
-The correct positions are revealed.
-If the guess is incorrect:
-One attempt is deducted.
-The game ends when:
-The player guesses the entire word, or
-The player runs out of attempts.
---------------------------------------------------------------------------
-🧠 Code Overview
-GuessTheWord Class
-Handles the main gameplay logic.
+🎮 How to Play
 
-Methods
-__init__()  Initializes the game with: Maximum attempts (10) Word object 
+Enter a 5-letter word.
 
-start() Runs the main game loop and controls gameplay.
+After each guess, the game shows colored feedback:
 
-get_input() Validates and returns a single letter guessed by the user.
+Color	Meaning
+🟩 Green	Correct letter in correct position
+🟨 Yellow	Correct letter but wrong position
+⬜ White	Letter not in the word
 
-Words Class (from words.py)
+Keep guessing until you solve the puzzle or run out of attempts.
 
-Responsible for managing the hidden word.
+🧾 Example Gameplay
+Clue: --- A girl with a man about to start a new life ---
 
-Typical responsibilities include:
-Selecting a random word
-Tracking guessed letters
-Updating displayed word progress
-Checking if the word is fully guessed
---------------------------------------------------------------------------
+Type your guess: PLANT
 
-💡 Example Gameplay
-🎮 Welcome to 'Guess the Word' game!
+Your results so far...
+You have 5 attempts remaining.
 
-Word: _ _ _ _ _
-Tries left: 10
-Enter a letter to guess the word: a
+┌─────────────┐
+│ P L A N T   │
+│ _ _ _ _ _   │
+│ _ _ _ _ _   │
+│ _ _ _ _ _   │
+│ _ _ _ _ _   │
+│ _ _ _ _ _   │
+└─────────────┘
+📈 Future Improvements
 
-❌ Oops! 'a' is not in the word.
+Add difficulty levels
 
-Word: _ _ _ _ _
-Tries left: 9
-Enter a letter to guess the word: e
+Add keyboard color tracking
 
-✅ Good job! 'e' is correct.
-🚀 Possible Improvements
---------------------------------------------------------------------------
-Add difficulty levels 
-Show already guessed letters
-Add ASCII hangman graphics
-Load words from a dictionary file
-Add GUI using Tkinter or PyQt
-Track player score
+GUI version using Tkinter or Pygame
+
+Score tracking
+
+Online multiplayer
