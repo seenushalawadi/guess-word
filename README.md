@@ -1,22 +1,26 @@
 # guess-word
-Developed a console-based word guessing game with core gameplay features to select random words, accept user guesses, track attempts, and display progress using string manipulation.
+Developed a console-based word guessing game with core gameplay features to select random words 
+accept user guesses, track attempts, and display progress using string manipulation.
 
 🎮 Guess The Word Game (Python)
 
 A simple command-line word guessing game written in Python.
 The player tries to guess a hidden word one letter at a time within a limited number of attempts.
 
-If the player guesses all the letters before the attempts run out, they win the game. Otherwise, the game ends and the correct word is revealed.
+If the player guesses all the letters before the attempts run out, they win the game. Otherwise, 
+the game ends and the correct word is revealed.
 
 📌 Features
-Interactive terminal-based gameplay Guess the word one letter at a time Maximum of 10 attempts Displays the current word progress Validates user input Shows win or game-over message
-
+Interactive terminal-based gameplay Guess the word one letter at a time Maximum of 10 attempts 
+Displays the current word progress Validates user input Shows win or game-over message
+________________________________________
 📂 Project Structure
 guess-the-word/
 │
 ├── main.py          # Main game logic (GuessTheWord class)
 ├── words.py         # Handles word selection and guessing logic
 └── README.md        # Project documentation
+________________________________________
 
 ⚙️ Requirements
 Python 3.7+
