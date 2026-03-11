@@ -24,7 +24,7 @@ No external libraries are required.
 
 ▶️ How to Run
 Clone or download the repository.
-git clone https://github.com/yourusername/guess-the-word.git
+git clone https://github.com/seenushalawadi/guess-word.git
 
 Navigate to the project folder.
 cd guess-the-word
