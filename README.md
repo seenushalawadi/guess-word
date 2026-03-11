@@ -23,10 +23,6 @@ This project runs entirely in the command line and uses colored output for a bet
 
 🖥️ Clean terminal UI with borders
 
-🧠 Game Clue
-A girl with a man about to start a new life
-
-Use the clue to help guess the secret word.
 
 🛠️ Technologies Used
 
@@ -53,12 +49,6 @@ project-folder/
 └── README.md
 
 
-File Description
-File	Description
-main.py	Main program that runs the game
-wordle.py	Contains the Wordle game logic
-letter_state.py	Defines the letter state (correct, misplaced, incorrect)
-data/wordle_words.txt	List of valid words
 
 
 ⚙️ Installation
