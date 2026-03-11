@@ -66,7 +66,7 @@ cd guess-word
 
 Run the game using:
 
-python wordle.py
+python  play_wordle.py
 
 
 🎮 How to Play
